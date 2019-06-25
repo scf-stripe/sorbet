@@ -626,7 +626,7 @@ void readOptions(Options &opts, int argc, char *argv[],
                 throw EarlyReturnWithCode(1);
             }
             for (string parentClassName : raw["autogen-subclasses-parent"].as<vector<string>>()) {
-                opts.autogenSubclassesParents.insert(parentClassName);
+                opts.autogenSubclassesParents.push_back(parentClassName);
             }
         }
 
